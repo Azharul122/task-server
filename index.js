@@ -67,10 +67,10 @@ async function run() {
 
       app.get('/college/:id', async (req, res) => {
         const collegeId = req.params.id;
-        const query = { _id: new ObjectId(collegeId) };
+        const query = { _id: new ObjectId(collegeId) }
         const result = await collegeCollection.findOne(query);
-        res.send(result);
-      });
+        res.send(result)
+    })
 
       app.get("/reviews", async (req, res) => {
         const result = await reviewsCollection.find().toArray();
